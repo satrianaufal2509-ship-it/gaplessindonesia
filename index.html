@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gapless Indonesia</title>
+<meta name="description" content="Gapless Indonesia: jaringan orang muda lintas kota yang mengurai ketimpangan lewat riset, gerakan komunitas, dan advokasi. Gabung jadi Kawan Setara atau ceritakan masalahmu.">
+<meta property="og:title" content="Keresahan Jadi Gerakan · Gapless Indonesia">
+<meta property="og:description" content="Beda daerah, beda kesempatan. Saatnya kita dekatkan. Gabung jadi Kawan Setara, kirim cerita, atau ajukan kolaborasi.">
+<link rel="canonical" href="https://satrianaufal2509-ship-it.github.io/gaplessindonesia/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://satrianaufal2509-ship-it.github.io/gaplessindonesia/">
+<meta property="og:image" content="https://satrianaufal2509-ship-it.github.io/gaplessindonesia/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#303236">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Brand Guideline Gapless v1.0 · satu tema (terang 45 / gelap 30 / oranye 20) · layout: slide editorial berurutan, header label + nomor, footer sumber */
+  --orange:#E65416;
+  --charcoal:#303236;
+  --beige:#D8D6C9;
+  --offwhite:#F5F5F5;
+  --grey:#52555A;
+  --ink-soft:#D3D2CA;
+  --display:"Inter Tight","Host Grotesk","Schibsted Grotesk",system-ui,sans-serif;
+  --accent:"Instrument Serif","Fraunces",Georgia,serif;
+  --mono:"IBM Plex Mono","JetBrains Mono",ui-monospace,monospace;
+  --gutter:clamp(20px,5vw,80px);
+  --maxw:1200px;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--offwhite);color:var(--charcoal);font-family:var(--display);font-size:17px;line-height:1.5}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-weight:500;letter-spacing:-.03em;line-height:1;text-wrap:balance}
+h1{font-size:clamp(56px,11.5vw,132px);letter-spacing:-.045em}
+h2{font-size:clamp(36px,5.8vw,72px);line-height:1.02}
+h3{font-size:clamp(21px,2.2vw,26px);letter-spacing:-.02em;line-height:1.15}
+em{font-family:var(--accent);font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--orange)}
+p{max-width:40em}
+.lead{font-size:clamp(18px,1.8vw,21px);line-height:1.5;max-width:36em}
+.mono{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.num{font-variant-numeric:tabular-nums}
+.sec{padding:clamp(64px,9vw,128px) var(--gutter)}
+.wrap{max-width:var(--maxw);margin:0 auto}
+.sec-head{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding-bottom:18px;border-bottom:1px solid currentColor;margin-bottom:clamp(32px,5vw,56px);color:var(--grey)}
+.light{background:var(--offwhite)}
+.warm{background:var(--beige)}
+.dark{background:var(--charcoal);color:var(--offwhite)}
+.dark .sec-head{color:var(--ink-soft)}
+.dark p{color:#E7E6DF}
+.muted{color:var(--grey)}
+.dark .muted{color:var(--ink-soft)}
+.stack{display:grid;gap:22px}
+
+/* tombol */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 24px;border-radius:999px;font-family:var(--display);font-size:19px;font-weight:600;letter-spacing:-.01em;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:#cf4a12}
+.btn-dark{background:var(--charcoal);color:#fff}
+.btn-ghost{border-color:currentColor;background:transparent;color:inherit;font-weight:500}
+.btn-sm{min-height:44px;padding:0 18px;font-size:16px}
+.arrow{width:30px;height:12px;flex:none}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.tlink{display:inline-flex;gap:10px;align-items:center;font-weight:600;text-decoration:none;border-bottom:2px solid var(--orange);padding-bottom:2px}
+
+/* elemen */
+.pill{display:inline-flex;align-items:center;gap:8px;min-height:28px;padding:2px 12px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;border:1.5px solid currentColor;white-space:nowrap}
+.pill-solid{background:var(--orange);border-color:var(--orange);color:#fff}
+.pill-dark{background:var(--charcoal);border-color:var(--charcoal);color:#fff}
+.plus{color:var(--orange);font-weight:500}
+.ph{display:inline-block;border:1.5px dashed currentColor;border-radius:6px;padding:0 .25em}
+
+/* ====== NAV ====== */
+.nav{position:sticky;top:0;z-index:40;background:rgba(48,50,54,.96);backdrop-filter:blur(8px);color:var(--offwhite);border-bottom:1px solid rgba(245,245,245,.12)}
+.nav-in{max-width:calc(var(--maxw) + 2*var(--gutter));margin:0 auto;padding:12px var(--gutter);display:flex;align-items:center;gap:20px}
+.nav-logo img{width:112px;height:auto}
+.nav-links{display:none;list-style:none;gap:22px;margin-left:auto;font-size:15px}
+.nav-links a{text-decoration:none;opacity:.9}
+.nav-links a:hover{opacity:1;color:#fff;text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--orange)}
+.nav-cta{margin-left:auto}
+.burger{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:1.5px solid rgba(245,245,245,.5);background:transparent;color:inherit;cursor:pointer}
+.burger svg{width:20px;height:20px}
+.drawer{display:none;padding:8px var(--gutter) 22px;border-top:1px solid rgba(245,245,245,.12)}
+.drawer.open{display:block}
+.drawer ul{list-style:none;display:grid}
+.drawer a{display:block;padding:14px 0;font-size:20px;text-decoration:none;border-bottom:1px solid rgba(245,245,245,.12)}
+@media(min-width:1080px){.nav-links{display:flex}.nav-cta{margin-left:12px}.burger,.drawer{display:none!important}}
+
+/* ====== HERO ====== */
+.hero{position:relative;overflow:hidden;background:var(--charcoal);color:var(--offwhite)}
+.ball{position:absolute;border-radius:50%;pointer-events:none;filter:blur(8px)}
+.hero .ball{width:min(80vw,760px);aspect-ratio:1;right:-22%;top:-30%;background:radial-gradient(circle at 42% 46%,var(--orange) 0%,rgba(230,84,22,.72) 28%,rgba(216,214,201,.25) 58%,rgba(48,50,54,0) 72%)}
+.hero-in{position:relative;z-index:1;max-width:calc(var(--maxw) + 2*var(--gutter));margin:0 auto;padding:clamp(48px,7vw,96px) var(--gutter) clamp(56px,8vw,104px);display:grid;gap:clamp(40px,5vw,64px);grid-template-columns:1fr}
+@media(min-width:1000px){.hero-in{grid-template-columns:1.15fr .85fr;align-items:center}}
+.hero .eyebrow{color:var(--ink-soft)}
+.hero h1{margin:22px 0 22px}
+.hero .support{font-size:clamp(22px,2.6vw,30px);font-weight:500;letter-spacing:-.02em;line-height:1.2;max-width:22em}
+.hero .lead{margin-top:16px;color:#E7E6DF}
+.hero .cta-row{margin-top:34px}
+.collage{position:relative;aspect-ratio:4/5;max-width:460px;width:100%;justify-self:center}
+.collage .photo{position:absolute;border-radius:18px;overflow:hidden;background:linear-gradient(160deg,#4a4c52,#3a3c41);border:1px solid rgba(245,245,245,.14);display:flex;align-items:flex-end;padding:14px}
+.collage .photo span{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);background:rgba(48,50,54,.7);padding:4px 8px;border-radius:6px}
+.collage .p1{left:0;top:4%;width:58%;height:46%}
+.collage .p2{right:0;top:22%;width:46%;height:38%}
+.collage .p3{left:14%;bottom:0;width:56%;height:36%}
+.collage svg.links{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:1;pointer-events:none}
+
+.gapmap{position:relative;width:100%;max-width:440px;aspect-ratio:5/6;justify-self:center}
+.gm-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(6,1fr)}
+.gm-grid i{display:block}
+.gm-grid .o{background:var(--orange)}.gm-grid .b{background:var(--beige)}.gm-grid .w{background:var(--offwhite)}.gm-grid .c{background:#232529}
+.gm-line{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.gm-tag{position:absolute;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:var(--charcoal);color:var(--offwhite);padding:5px 10px;border-radius:999px;border:1px solid rgba(245,245,245,.4)}
+.gm-tag.t1{left:14%;top:4%}.gm-tag.t2{left:74%;top:44%}.gm-tag.t3{left:34%;top:90%}
+@media(max-width:999px){.gapmap{max-width:300px}}
+/* ====== 02 PROBLEM ====== */
+.problem-grid{display:grid;gap:clamp(32px,5vw,64px);grid-template-columns:1fr}
+@media(min-width:960px){.problem-grid{grid-template-columns:1fr 1fr;align-items:start}}
+.problem-copy p{font-size:19px}
+.problem-copy .human{font-size:clamp(24px,2.6vw,30px);font-weight:500;letter-spacing:-.02em;line-height:1.2;margin-top:6px}
+.stats{display:grid;gap:12px}
+.stat{background:var(--beige);border-radius:18px;padding:24px 26px;display:grid;gap:10px}
+.stat .big{font-size:clamp(48px,6vw,76px);font-weight:500;letter-spacing:-.04em;line-height:1}
+.stat .src{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;padding-top:12px;border-top:1px solid rgba(48,50,54,.25);font-size:12px;color:var(--grey)}
+.stat .src a{font-family:var(--display);text-transform:none;letter-spacing:0;font-size:14px;font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--orange);color:var(--charcoal)}
+
+/* ====== 03 HOW ====== */
+.flow{list-style:none;display:grid;gap:14px;grid-template-columns:1fr;margin-top:clamp(36px,5vw,56px);position:relative}
+@media(min-width:900px){.flow{grid-template-columns:repeat(3,1fr);gap:0}}
+.flow li{position:relative;padding:28px 26px 30px;background:#fff;border:1px solid rgba(48,50,54,.12);border-radius:18px;display:grid;gap:12px;align-content:start}
+@media(min-width:900px){
+  .flow li{border-radius:0;border-right:none}
+  .flow li:first-child{border-radius:18px 0 0 18px}
+  .flow li:last-child{border-radius:0 18px 18px 0;border-right:1px solid rgba(48,50,54,.12);background:var(--charcoal);color:var(--offwhite)}
+  .flow li:last-child p{color:#E7E6DF}
+  .flow li:last-child .mono{color:var(--ink-soft)}
+  .flow li:not(:last-child)::after{content:"";position:absolute;right:-15px;top:34px;width:28px;height:28px;border-radius:50%;background:var(--orange);z-index:2;box-shadow:0 0 0 5px var(--offwhite);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath d='M8 14h12M15 9l5 5-5 5' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E")}
+}
+.flow .bar{height:6px;border-radius:999px;background:rgba(48,50,54,.12);overflow:hidden}
+.flow .bar i{display:block;height:100%;background:var(--orange)}
+.flow .mono{color:var(--grey)}
+
+.flow p{color:var(--grey);font-size:16px}
+
+/* ====== 04 ISSUES ====== */
+.issues{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin-top:clamp(36px,5vw,56px)}
+@media(min-width:1000px){.issues{grid-template-columns:repeat(4,1fr)}}
+.issue{display:flex;flex-direction:column;gap:14px;padding:22px;border-radius:18px;background:#fff;border:1px solid rgba(48,50,54,.12);min-height:230px;text-decoration:none;transition:transform .15s ease,border-color .15s ease}
+.issue:hover{transform:translateY(-2px);border-color:var(--charcoal)}
+.issue .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.issue .top .mono{color:var(--grey)}
+.issue p{color:var(--grey);font-size:15px}
+.issue .go{margin-top:auto;font-weight:600;font-size:15px;display:flex;gap:8px;align-items:center}
+.issue .go span{color:var(--orange)}
+.issue.prio{background:var(--charcoal);color:var(--offwhite);border-color:var(--charcoal)}
+.issue.prio p{color:#E7E6DF}
+.issue.prio .top .mono{color:var(--ink-soft)}
+.note-row{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;margin-top:26px}
+
+/* ====== 05 MOVEMENT ====== */
+.campaign{display:grid;gap:0;grid-template-columns:1fr;border-radius:24px;overflow:hidden;margin-top:clamp(36px,5vw,56px)}
+@media(min-width:960px){.campaign{grid-template-columns:1.05fr .95fr}}
+.campaign .c-main{background:var(--orange);color:#fff;padding:clamp(28px,4vw,48px);display:grid;gap:18px;align-content:start;position:relative;overflow:hidden}
+.campaign .c-main h3{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.03em;line-height:1.02}
+.campaign .c-main h3 em{color:var(--charcoal)}
+.campaign .c-main .meta{display:flex;flex-wrap:wrap;gap:8px}
+.campaign .c-main .pill{border-color:#fff;color:#fff}
+.campaign .c-main .pill-dark{border-color:var(--charcoal)}
+.campaign .c-side{background:var(--offwhite);padding:clamp(28px,4vw,44px);display:grid;gap:0;align-content:start}
+.facts{display:grid;gap:0}
+.facts div{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid rgba(48,50,54,.2)}
+.facts div:first-child{padding-top:0}
+.facts dt{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);padding-top:3px}
+.facts dd{font-size:16px}
+.campaign-intro{display:grid;gap:12px;margin-top:22px}
+.paths{display:grid;gap:12px;grid-template-columns:1fr;margin-top:16px}
+@media(min-width:760px){.paths{grid-template-columns:repeat(3,1fr)}}
+.path{display:flex;flex-direction:column;gap:10px;padding:22px;border-radius:18px;background:var(--charcoal);color:var(--offwhite);text-decoration:none;min-height:150px;transition:transform .15s ease}
+.path:hover{transform:translateY(-2px)}
+.path .mono{color:var(--ink-soft)}
+.path strong{font-size:21px;font-weight:500;letter-spacing:-.02em;line-height:1.2}
+.path .go{margin-top:auto;color:var(--orange);font-weight:600}
+
+/* ====== 06 PROGRAMS ====== */
+.prog{width:100%;border-collapse:collapse;margin-top:12px}
+.prog th{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:400;color:var(--ink-soft);text-align:left;padding:0 0 12px;border-bottom:1px solid rgba(245,245,245,.35)}
+.prog td{padding:18px 16px 18px 0;border-bottom:1px solid rgba(245,245,245,.18);vertical-align:top;color:#E7E6DF}
+.prog td:first-child{font-size:20px;font-weight:500;color:var(--offwhite);letter-spacing:-.01em;width:38%}
+.prog td .n{font-family:var(--mono);font-size:12px;color:var(--orange);margin-right:10px}
+@media(max-width:640px){.prog,.prog tbody,.prog tr,.prog td{display:block;width:100%}.prog thead{display:none}.prog tr{padding:16px 0;border-bottom:1px solid rgba(245,245,245,.18)}.prog td{border:none;padding:4px 0}.prog td:first-child{width:100%}}
+.sub-h{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin:clamp(48px,6vw,72px) 0 18px}
+.products{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+@media(min-width:1000px){.products{grid-template-columns:repeat(4,1fr)}}
+.prod{display:flex;flex-direction:column;gap:12px;padding:22px;border-radius:18px;border:1px solid rgba(245,245,245,.2);min-height:220px}
+.prod p{font-size:15px}
+.prod .status{align-self:flex-start;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px dashed rgba(245,245,245,.5);color:var(--ink-soft)}
+.prod .status.live{border:1px solid var(--orange);color:#fff;background:var(--orange)}
+.prod .tlink{margin-top:auto;align-self:flex-start;font-size:15px;color:var(--offwhite)}
+.prod .soon{margin-top:auto;font-size:14px;color:var(--ink-soft)}
+.featured{display:grid;gap:0;grid-template-columns:1fr;border-radius:24px;overflow:hidden;margin-top:clamp(40px,5vw,56px);background:var(--beige);color:var(--charcoal)}
+@media(min-width:960px){.featured{grid-template-columns:1.2fr .8fr}}
+.featured .f-a{padding:clamp(28px,4vw,48px);display:grid;gap:18px;align-content:start}
+.featured .f-a p{color:var(--charcoal)}
+.featured .muted{color:var(--grey)}
+.featured ul{list-style:none;display:grid;gap:0;border-top:1px solid rgba(48,50,54,.3)}
+.featured li{display:grid;grid-template-columns:24px 1fr;padding:12px 0;border-bottom:1px solid rgba(48,50,54,.3)}
+.featured .f-b{background:var(--orange);color:#fff;padding:clamp(28px,4vw,48px);display:grid;gap:16px;align-content:start}
+.featured .price{font-size:clamp(72px,10vw,120px);font-weight:500;letter-spacing:-.05em;line-height:.9}
+.featured .f-b p{color:#fff;font-size:19px;font-weight:500;line-height:1.35}
+.featured .f-b .mono{color:#fff}
+
+/* ====== 07 NETWORK ====== */
+.net-intro{display:grid;gap:22px;grid-template-columns:1fr}
+@media(min-width:960px){.net-intro{grid-template-columns:1.1fr .9fr;align-items:end}}
+.roles{display:grid;gap:12px;grid-template-columns:1fr;margin-top:clamp(36px,5vw,56px)}
+@media(min-width:900px){.roles{grid-template-columns:repeat(3,1fr)}}
+.role{display:flex;flex-direction:column;gap:12px;padding:26px;border-radius:20px;background:#fff;border:1px solid rgba(48,50,54,.12)}
+.role .mono{color:var(--grey)}
+.role p{color:var(--grey);font-size:16px}
+.role .btn{margin-top:auto;align-self:flex-start}
+.role.chap{background:var(--charcoal);color:var(--offwhite);border-color:var(--charcoal)}
+.role.chap .mono{color:var(--ink-soft)}
+.role.chap p{color:#E7E6DF}
+.tiers{display:grid;gap:0;margin:6px 0 10px}
+.tiers div{padding:12px 0;border-top:1px solid rgba(245,245,245,.2);font-size:15px;color:#E7E6DF}
+.tiers b{display:block;color:#fff;font-weight:600;font-size:16px}
+.map-empty{margin-top:12px;border-radius:20px;background:var(--beige);padding:clamp(24px,4vw,40px);display:grid;gap:18px;grid-template-columns:1fr;align-items:center;position:relative;overflow:hidden}
+@media(min-width:900px){.map-empty{grid-template-columns:auto 1fr auto}}
+.map-empty .count{font-size:clamp(64px,8vw,96px);font-weight:500;letter-spacing:-.05em;line-height:.9}
+.map-empty p{color:var(--charcoal)}
+.dots{display:grid;grid-template-columns:repeat(12,10px);gap:8px}
+.dots i{width:10px;height:10px;border-radius:50%;background:rgba(48,50,54,.18)}
+
+/* ====== FORMS ====== */
+.form-card{margin-top:clamp(40px,5vw,56px);border-radius:24px;background:var(--charcoal);color:var(--offwhite);padding:clamp(24px,4vw,48px);display:grid;gap:24px}
+.form-card.light-card{background:#fff;color:var(--charcoal);border:1px solid rgba(48,50,54,.12)}
+.form-card .f-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:baseline}
+form{display:grid;gap:18px}
+.grid2{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:760px){.grid2{grid-template-columns:1fr 1fr}}
+.field{display:grid;gap:8px}
+.field label,.field legend{font-size:15px;font-weight:600}
+.field .hint{font-size:13px;color:var(--ink-soft);font-weight:400}
+.light-card .field .hint{color:var(--grey)}
+input[type=text],input[type=email],input[type=tel],input[type=date],input[type=url],select,textarea{width:100%;min-height:50px;padding:12px 14px;border-radius:12px;border:1.5px solid rgba(245,245,245,.35);background:rgba(245,245,245,.06);color:inherit;font:inherit;font-size:16px}
+.light-card input,.light-card select,.light-card textarea{border-color:rgba(48,50,54,.3);background:var(--offwhite)}
+select option{color:var(--charcoal)}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(230,84,22,.35)}
+fieldset{border:none;display:grid;gap:10px}
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choice{position:relative}
+.choice input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.choice span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid rgba(245,245,245,.4);font-size:15px}
+.light-card .choice span{border-color:rgba(48,50,54,.3)}
+.choice input:checked+span{background:var(--orange);border-color:var(--orange);color:#fff}
+.choice input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
+.check{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;font-size:15px}
+.check input{width:20px;height:20px;margin-top:2px;accent-color:var(--orange)}
+.form-foot{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center}
+.form-msg{display:none;padding:14px 16px;border-radius:12px;border:1.5px solid var(--orange);font-size:15px}
+.form-msg.on{display:block}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.form-msg.ok{background:rgba(230,84,22,.12)}
+.draft{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);border:1px dashed currentColor;border-radius:999px;padding:4px 10px}
+.light-card .draft{color:var(--grey)}
+
+/* ====== 08 STORIES ====== */
+.story-grid{display:grid;gap:clamp(28px,4vw,48px);grid-template-columns:1fr}
+@media(min-width:960px){.story-grid{grid-template-columns:.9fr 1.1fr;align-items:start}}
+.qs{list-style:none;display:grid;gap:0;margin-top:22px;border-top:1px solid rgba(48,50,54,.25)}
+.qs li{display:grid;grid-template-columns:24px 1fr;padding:14px 0;border-bottom:1px solid rgba(48,50,54,.25);font-size:17px}
+.promise{margin-top:24px;padding:20px 22px;border-radius:16px;background:var(--charcoal);color:var(--offwhite);display:grid;gap:10px}
+.promise p{color:#E7E6DF;font-size:15px}
+
+/* ====== 09 PARTNERSHIP ====== */
+.part-grid{display:grid;gap:clamp(28px,4vw,48px);grid-template-columns:1fr}
+@media(min-width:960px){.part-grid{grid-template-columns:.9fr 1.1fr;align-items:start}}
+.who{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.who .pill{color:var(--charcoal)}
+.indep{margin-top:24px;padding:22px;border-radius:16px;border:1.5px solid var(--charcoal);display:grid;gap:8px}
+.indep .mono{color:var(--grey)}
+
+/* ====== 10 FINAL ====== */
+.final{position:relative;overflow:hidden;background:var(--charcoal);color:var(--offwhite);padding:clamp(88px,12vw,160px) var(--gutter)}
+.final .ball{width:min(95vw,860px);aspect-ratio:1;left:-24%;bottom:-55%;background:radial-gradient(circle at 50% 50%,var(--orange) 0%,rgba(230,84,22,.7) 30%,rgba(216,214,201,.24) 58%,rgba(48,50,54,0) 72%)}
+.final .wrap{position:relative;z-index:1}
+.final h2{font-size:clamp(44px,7.6vw,100px);max-width:13ch;margin:20px 0 24px}
+.final p{color:#E7E6DF;font-size:clamp(18px,1.8vw,21px)}
+.final .cta-row{margin-top:34px}
+
+.policy{display:grid;gap:clamp(28px,4vw,56px);grid-template-columns:1fr}
+@media(min-width:900px){.policy{grid-template-columns:1fr 1fr}}
+.plist{list-style:none;margin-top:18px;border-top:1px solid rgba(48,50,54,.25)}
+.plist li{padding:14px 0;border-bottom:1px solid rgba(48,50,54,.25);font-size:15px;color:var(--grey)}
+.plist b{color:var(--charcoal);font-weight:600}
+footer{background:#26282C;color:var(--offwhite);padding:56px var(--gutter) 40px}
+.f-in{max-width:var(--maxw);margin:0 auto;display:grid;gap:36px;grid-template-columns:1fr}
+@media(min-width:900px){.f-in{grid-template-columns:1.3fr 1fr 1fr 1fr}}
+footer img{width:150px;height:auto}
+footer .mono{color:var(--ink-soft);font-size:12px;margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:10px;font-size:15px;color:#E7E6DF}
+footer a{text-decoration:none;border-bottom:1px solid rgba(245,245,245,.3)}
+footer .tl{font-family:var(--accent);font-style:italic;font-size:26px;margin-top:16px;line-height:1.2}
+.f-bottom{max-width:var(--maxw);margin:40px auto 0;padding-top:20px;border-top:1px solid rgba(245,245,245,.15);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--ink-soft);font-size:13px}
+
+.toast{position:fixed;left:50%;bottom:18px;transform:translate(-50%,160%);z-index:60;max-width:min(92vw,520px);background:var(--offwhite);color:var(--charcoal);border:2px solid var(--orange);border-radius:14px;padding:14px 18px;font-size:15px;box-shadow:0 10px 30px rgba(0,0,0,.2);transition:transform .25s ease}
+.toast.on{transform:translate(-50%,0)}
+.toast .mono{display:block;color:var(--grey);font-size:11px;margin-bottom:4px}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" aria-label="Navigasi utama">
+  <div class="nav-in">
+    <a class="nav-logo" href="#beranda" aria-label="Gapless Indonesia, ke atas"><img src="data:image/webp;base64,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" width="400" height="170" alt="Gapless Indonesia"></a>
+    <ul class="nav-links">
+      <li><a href="#tentang">Tentang Kami</a></li>
+      <li><a href="#isu">Isu</a></li>
+      <li><a href="#gerakan">Gerakan</a></li>
+      <li><a href="#chapter">Chapter</a></li>
+      <li><a href="#rapor">Rapor &amp; Publikasi</a></li>
+      <li><a href="#kolaborasi">Kolaborasi</a></li>
+    </ul>
+    <a class="btn btn-primary btn-sm nav-cta" href="#gabung">Gabung Gerakan</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Buka menu">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+    </button>
+  </div>
+  <div class="drawer" id="drawer">
+    <ul>
+      <li><a href="#tentang">Tentang Kami</a></li>
+      <li><a href="#isu">Isu</a></li>
+      <li><a href="#gerakan">Gerakan</a></li>
+      <li><a href="#chapter">Chapter</a></li>
+      <li><a href="#rapor">Rapor &amp; Publikasi</a></li>
+      <li><a href="#kolaborasi">Kolaborasi</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ 01 HERO ============ -->
+<header class="hero" id="beranda">
+  <div class="ball" aria-hidden="true"></div>
+  <div class="hero-in">
+    <div>
+      <span class="mono eyebrow">Gapless Indonesia / Youth-led movement</span>
+      <h1>Keresahan jadi <em>gerakan.</em></h1>
+      <p class="support">Beda daerah, beda kesempatan. Saatnya kita dekatkan.</p>
+      <p class="lead">Kesempatan seharusnya tidak ditentukan oleh tempat kita lahir dan tinggal. Kami menghubungkan anak muda, komunitas, data, dan pengambil kebijakan untuk memperkecil ketimpangan di Indonesia.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#gabung">Jadi Kawan Setara
+          <svg class="arrow" viewBox="0 0 30 12" aria-hidden="true"><path d="M0 6h27M22 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+        <a class="btn btn-ghost" href="#cerita">Ceritakan masalahmu</a>
+      </div>
+    </div>
+    <div class="gapmap" aria-hidden="true">
+      <div class="gm-grid">
+        <i class="o"></i><i></i><i class="b"></i><i></i><i class="w"></i>
+        <i></i><i class="c"></i><i></i><i class="o"></i><i></i>
+        <i class="b"></i><i></i><i class="o"></i><i class="c"></i><i></i>
+        <i></i><i class="w"></i><i></i><i></i><i class="b"></i>
+        <i class="c"></i><i></i><i class="b"></i><i class="o"></i><i></i>
+        <i></i><i class="o"></i><i></i><i class="w"></i><i class="c"></i>
+      </div>
+      <svg class="gm-line" viewBox="0 0 500 600" preserveAspectRatio="none">
+        <path d="M50 50 C 180 90, 260 150, 350 250 S 330 470, 150 550" fill="none" stroke="#F5F5F5" stroke-width="2.5" stroke-dasharray="7 8"/>
+        <circle cx="50" cy="50" r="9" fill="#F5F5F5"/><circle cx="350" cy="250" r="9" fill="#F5F5F5"/><circle cx="150" cy="550" r="9" fill="#F5F5F5"/>
+      </svg>
+      <span class="gm-tag t1">Kota</span><span class="gm-tag t2">Desa</span><span class="gm-tag t3">3T</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 02 PROBLEM ============ -->
+<section class="sec light" id="masalah" aria-labelledby="h-masalah">
+  <div class="wrap">
+    <div class="sec-head"><span class="mono">Masalahnya</span><span class="mono num">02 / 10</span></div>
+    <div class="problem-grid">
+      <div class="problem-copy stack">
+        <h2 id="h-masalah">Indonesia yang sama. Kesempatan yang <em>berbeda.</em></h2>
+        <p>Tidak semua anak muda memulai hidup dari garis yang sama.</p>
+        <p class="muted">Ada yang punya akses sekolah berkualitas, informasi beasiswa, jaringan profesional, dan peluang kerja. Ada juga yang harus berjuang lebih keras hanya karena tempat tinggal, kondisi ekonomi, atau keterbatasan akses.</p>
+        <p class="human">Ketimpangan bukan sekadar angka. Ada cerita manusia di baliknya.</p>
+        <div><a class="tlink" href="#isu">Lihat isu yang kami kawal <span aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="stats">
+        <article class="stat">
+          <span class="mono muted">Pendidikan</span>
+          <span class="big num">17,51%</span>
+          <p>Angka partisipasi kuliah anak muda dari 20% keluarga berpengeluaran terendah. Di 20% teratas: <strong>52,66%</strong>.</p>
+          <div class="src mono"><span>BPS · APK perguruan tinggi menurut kuintil pengeluaran · 2023</span><a href="https://www.bps.go.id/id/statistics-table/2/MTQ0NCMy/angka-partisipasi-kasar--apk--perguruan-tinggi--pt--menurut-kuintil-pengeluaran.html" target="_blank" rel="noopener">Lihat data BPS</a></div>
+        </article>
+        <article class="stat">
+          <span class="mono muted">Pekerjaan</span>
+          <span class="big num">17,37%</span>
+          <p>Tingkat pengangguran terbuka usia 15–24 tahun. Angka nasional: <strong>4,65%</strong>.</p>
+          <div class="src mono"><span>BPS · Sakernas · Mei 2026</span><a href="https://www.bps.go.id/id/pressrelease/2026/08/05/2606/tingkat-pengangguran-terbuka--tpt--sebesar-4-65-persen---rata-rata-upah-buruh-sebesar-3-39-juta-rupiah-.html" target="_blank" rel="noopener">Lihat rilis BPS</a></div>
+        </article>
+        <article class="stat">
+          <span class="mono muted">Desa dan kota</span>
+          <span class="big num">10,67%</span>
+          <p>Penduduk miskin di perdesaan. Di perkotaan: <strong>6,34%</strong>.</p>
+          <div class="src mono"><span>BPS · Profil kemiskinan · Maret 2026</span><a href="https://www.bps.go.id/id/pressrelease/2026/08/05/2594/persentase-penduduk-miskin-maret-2026-turun-menjadi-8-07-persen-.html" target="_blank" rel="noopener">Lihat rilis BPS</a></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 HOW ============ -->
+<section class="sec light" id="tentang" aria-labelledby="h-cara" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="mono">Cara Gapless bekerja</span><span class="mono num">03 / 10</span></div>
+    <h2 id="h-cara">Ngeluh boleh. Ngulik wajib. <em>Gerak bareng.</em></h2>
+    <ol class="flow">
+      <li><span class="mono num">01 / Dengar &amp; temukan</span><div class="bar"><i style="width:33%"></i></div><h3>Dengar &amp; Temukan</h3><p>Mengumpulkan cerita warga, keresahan anak muda, dan masalah di berbagai daerah.</p></li>
+      <li><span class="mono num">02 / Riset &amp; buktikan</span><div class="bar"><i style="width:66%"></i></div><h3>Riset &amp; Buktikan</h3><p>Memeriksa data, memverifikasi temuan, menyusun Kartu Bukti, dan menerbitkan Rapor Gapless.</p></li>
+      <li><span class="mono num">03 / Gerakkan perubahan</span><div class="bar" style="background:rgba(245,245,245,.2)"><i style="width:100%"></i></div><h3>Gerakkan Perubahan</h3><p>Mempertemukan komunitas, pemerintah, kampus, dan mitra untuk mencari solusi, mengawal komitmen, serta mendorong akuntabilitas.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 04 ISSUES ============ -->
+<section class="sec warm" id="isu" aria-labelledby="h-isu">
+  <div class="wrap">
+    <div class="sec-head"><span class="mono">Yang kami perjuangkan</span><span class="mono num">04 / 10</span></div>
+    <h2 id="h-isu">Delapan isu. Satu tujuan: kesempatan yang lebih <em>setara.</em></h2>
+    <div class="issues">
+      <a class="issue" href="#cerita" data-isu="Ekonomi dan aset"><div class="top"><span class="mono num">01</span></div><h3>Ekonomi dan aset</h3><p>Siapa yang bisa menabung, punya aset, dan bertahan saat harga naik.</p><span class="go">Ceritakan masalahnya <span aria-hidden="true">→</span></span></a>
+      <a class="issue prio" href="#cerita" data-isu="Pekerjaan"><div class="top"><span class="mono num">02</span><span class="pill pill-solid">Prioritas awal</span></div><h3>Pekerjaan</h3><p>Akses kerja layak, magang yang adil, dan perlindungan pekerja muda.</p><span class="go">Ceritakan masalahnya <span aria-hidden="true">→</span></span></a>
+      <a class="issue prio" href="#cerita" data-isu="Pendidikan"><div class="top"><span class="mono num">03</span><span class="pill pill-solid">Prioritas awal</span></div><h3>Pendidikan</h3><p>Akses sekolah, informasi jurusan, beasiswa, dan bantuan biaya kuliah.</p><span class="go">Ceritakan masalahnya <span aria-hidden="true">→</span></span></a>
+      <a class="issue" href="#cerita" data-isu="Kesehatan dan perlindungan sosial"><div class="top"><span class="mono num">04</span></div><h3>Kesehatan dan perlindungan sosial</h3><p>Layanan kesehatan dan bantuan sosial yang sampai ke yang butuh.</p><span class="go">Ceritakan masalahnya <span aria-hidden="true">→</span></span></a>
+      <a class="issue" href="#cerita" data-isu="Hunian dan layanan dasar"><div class="top"><span class="mono num">05</span></div><h3>Hunian dan layanan dasar</h3><p>Rumah terjangkau, air bersih, listrik, dan sanitasi.</p><span class="go">Ceritakan masalahnya <span aria-hidden="true">→</span></span></a>
+      <a class="issue" href="#cerita" data-isu="Mobilitas dan akses digital"><div class="top"><span class="mono num">06</span></div><h3>Mobilitas dan akses digital</h3><p>Transportasi dan internet yang menentukan siapa bisa ikut terlibat.</p><span class="go">Ceritakan masalahnya <span aria-hidden="true">→</span></span></a>
+      <a class="issue" href="#cerita" data-isu="Lingkungan dan iklim"><div class="top"><span class="mono num">07</span></div><h3>Lingkungan dan iklim</h3><p>Siapa yang paling terdampak krisis iklim dan kerusakan lingkungan.</p><span class="go">Ceritakan masalahnya <span aria-hidden="true">→</span></span></a>
+      <a class="issue" href="#cerita" data-isu="Tata kelola dan akses kebijakan"><div class="top"><span class="mono num">08</span></div><h3>Tata kelola dan akses kebijakan</h3><p>Siapa yang didengar saat kebijakan dibuat dan dijalankan.</p><span class="go">Ceritakan masalahnya <span aria-hidden="true">→</span></span></a>
+    </div>
+    <div class="note-row">
+      <p class="muted" style="font-size:15px">Pendidikan dan pekerjaan jadi prioritas awal. Isu lain dikembangkan bertahap.</p>
+      <a class="btn btn-dark" href="#cerita">Kirim cerita &amp; temuan</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 CURRENT MOVEMENT ============ -->
+<section class="sec light" id="gerakan" aria-labelledby="h-gerakan">
+  <div class="wrap">
+    <div class="sec-head"><span class="mono">Gerakan berjalan</span><span class="mono num">05 / 10</span></div>
+    <h2 id="h-gerakan">Gerakan dimulai dari masalah yang <em>nyata.</em></h2>
+    <div class="campaign">
+      <div class="c-main">
+        <div class="meta"><span class="pill pill-dark">Status: aktif</span><span class="pill">Pendidikan</span></div>
+        <span class="mono">Featured campaign</span>
+        <h3>Salah Jurusan &amp; <em>KIP Kuliah</em></h3>
+        <p style="color:#fff;font-size:19px;font-weight:500;line-height:1.4">Banyak siswa menghadapi keputusan besar tentang kuliah tanpa informasi, pendampingan, dan akses yang setara.</p>
+      </div>
+      <div class="c-side">
+        <dl class="facts">
+          <div><dt>Tujuan</dt><dd>Memetakan masalah salah jurusan dan KIP Kuliah yang salah sasaran, lalu membangun solusi bersama.</dd></div>
+          <div><dt>Kegiatan</dt><dd>Survei pelajar dan mahasiswa, mentoring kakak kampus, forum terbuka, dan Rapor Gapless.</dd></div>
+          <div><dt>Hasil</dt><dd>Belum ada hasil yang dipublikasikan. Kampanye masih berjalan; hasilnya diumumkan di sini.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="campaign-intro">
+      <p>Gapless mengajak pelajar, mahasiswa, mentor, guru, dan masyarakat untuk memetakan masalahnya serta membangun solusi bersama.</p>
+    </div>
+    <div class="paths">
+      <a class="path" href="#cerita" data-isu="Pendidikan"><span class="mono">Jalur 01 · pelajar &amp; mahasiswa</span><strong>Ceritakan pengalamanmu soal jurusan &amp; KIP Kuliah</strong><span class="go">Kirim cerita →</span></a>
+      <a class="path" href="#gabung" data-role="mentor"><span class="mono">Jalur 02 · mahasiswa</span><strong>Jadi Mentor Kakak Kampus</strong><span class="go">Daftar jadi mentor →</span></a>
+      <a class="path" href="#rapor"><span class="mono">Jalur 03 · siswa kelas 12</span><strong>Kenali Navkar</strong><span class="go">Lihat isi Navkar →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 PROGRAMS & PRODUCTS ============ -->
+<section class="sec dark" id="program" aria-labelledby="h-program">
+  <div class="wrap">
+    <div class="sec-head"><span class="mono">Program &amp; produk</span><span class="mono num">06 / 10</span></div>
+    <h2 id="h-program">Kami tidak berhenti di <em>wacana.</em></h2>
+
+    <div class="sub-h"><span class="mono muted">Lima program utama</span></div>
+    <table class="prog">
+      <thead><tr><th scope="col">Program</th><th scope="col">Fungsi</th></tr></thead>
+      <tbody>
+        <tr><td><span class="n">01</span>Kawal Program</td><td>Mengawasi implementasi kebijakan dan mendorong perbaikan</td></tr>
+        <tr><td><span class="n">02</span>Ekspansi Gapless</td><td>Membangun serta mengaktifkan jaringan kota</td></tr>
+        <tr><td><span class="n">03</span>Sekolah Gapless</td><td>Mengembangkan kapasitas dan kepemimpinan anak muda</td></tr>
+        <tr><td><span class="n">04</span>Gapless Media &amp; Creative</td><td>Mengubah temuan menjadi cerita, edukasi, dan kampanye</td></tr>
+        <tr><td><span class="n">05</span>Ruang Gapless</td><td>Memfasilitasi dialog, diskusi, konsolidasi, audiensi, dan aksi</td></tr>
+      </tbody>
+    </table>
+
+    <div class="sub-h" id="rapor"><span class="mono muted">Lima produk Gapless</span><span class="mono muted">Status apa adanya</span></div>
+    <div class="products">
+      <article class="prod"><span class="status live">Aktif · Batch 1</span><h3>Navkar</h3><p>Pendampingan pendidikan dan arah masa depan.</p><a class="tlink" href="#navkar">Kenali Navkar <span aria-hidden="true">→</span></a></article>
+      <article class="prod"><span class="status">Dalam penyusunan</span><h3>Rapor Gapless</h3><p>Publikasi temuan, data, dan evaluasi masalah publik.</p><span class="soon">Edisi pertama sedang disusun.</span></article>
+      <article class="prod"><span class="status">Segera</span><h3>Gapless Forum</h3><p>Ruang dialog publik, kolaborasi, dan pembahasan solusi.</p><a class="tlink" href="#gabung" data-role="kawan">Kabari aku <span aria-hidden="true">→</span></a></article>
+      <article class="prod"><span class="status">Dalam pengembangan</span><h3>Gapless Network Indonesia</h3><p>Ekosistem jaringan anggota, volunteer, dan chapter lintas kota.</p><a class="tlink" href="#gabung">Gabung jaringan <span aria-hidden="true">→</span></a></article>
+      <article class="prod"><span class="status">Dalam pengembangan</span><h3>Gapless Collabs Product</h3><p>Produk dan kegiatan kolaboratif yang menghadirkan nilai sosial maupun ekonomi.</p><a class="tlink" href="#kolaborasi">Ajukan kolaborasi <span aria-hidden="true">→</span></a></article>
+    </div>
+
+    <div class="featured" id="navkar">
+      <div class="f-a">
+        <span class="mono muted">Featured product</span>
+        <h3 style="font-size:clamp(34px,4.4vw,52px);letter-spacing:-.03em">Navkar</h3>
+        <p>Pendampingan memilih jurusan dan arah masa depan, bareng kakak kampus.</p>
+        <ul>
+          <li><span class="plus" aria-hidden="true">+</span>Tes minat</li>
+          <li><span class="plus" aria-hidden="true">+</span>Dua kelas jurusan live</li>
+          <li><span class="plus" aria-hidden="true">+</span>Mentoring kelompok kakak kampus</li>
+          <li><span class="plus" aria-hidden="true">+</span>Panduan jalur masuk dan beasiswa</li>
+          <li><span class="plus" aria-hidden="true">+</span>Grup diskusi selama tiga bulan</li>
+        </ul>
+        <div><a class="btn btn-dark" href="#gabung" data-role="navkar">Daftar minat Navkar</a></div>
+      </div>
+      <div class="f-b">
+        <span class="mono">Harga bundling</span>
+        <span class="price num">Rp99rb</span>
+        <p>Setiap sepuluh bundling terjual mendukung satu siswa dari wilayah 3T ikut program secara gratis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 NETWORK ============ -->
+<section class="sec light" id="chapter" aria-labelledby="h-chapter">
+  <div class="wrap">
+    <div class="sec-head"><span class="mono">Gapless Network</span><span class="mono num">07 / 10</span></div>
+    <div class="net-intro">
+      <h2 id="h-chapter">Gerakan nasional dimulai dari <em>kota kita.</em></h2>
+      <p class="lead muted">Gapless tumbuh melalui anak muda yang mengenal masalah daerahnya sendiri, bukan melalui satu tim yang mencoba menyelesaikan semuanya dari Jakarta.</p>
+    </div>
+
+    <div class="roles">
+      <article class="role">
+        <span class="mono">Pilihan 01</span>
+        <h3>Kawan Setara</h3>
+        <p>Untuk siapa pun yang ingin mengikuti gerakan, membagikan cerita, berpartisipasi dalam survei, atau menghadiri forum.</p>
+        <a class="btn btn-primary btn-sm" href="#gabung" data-role="kawan">Jadi Kawan Setara</a>
+      </article>
+      <article class="role">
+        <span class="mono">Pilihan 02</span>
+        <h3>Volunteer Setara</h3>
+        <p>Untuk mereka yang ingin menjalankan kegiatan, membantu riset, menjadi mentor, atau mengawal isu.</p>
+        <a class="btn btn-dark btn-sm" href="#gabung" data-role="volunteer">Jadi Volunteer Setara</a>
+      </article>
+      <article class="role chap">
+        <span class="mono">Pilihan 03</span>
+        <h3>Bangun Chapter</h3>
+        <p>Untuk kelompok anak muda yang ingin mengembangkan gerakan Gapless di kotanya.</p>
+        <div class="tiers">
+          <div><b>Chapter Rintisan</b>Head Chapter, minimal 10 volunteer, satu Kartu Bukti dan satu kegiatan dalam 90 hari.</div>
+          <div><b>Chapter Resmi</b>Minimal 25 volunteer aktif, satu Rapor Gapless atau satu Gapless Forum, disertai laporan sederhana.</div>
+        </div>
+        <a class="btn btn-primary btn-sm" href="#gabung" data-role="chapter">Bangun gerakan di kotamu</a>
+      </article>
+    </div>
+
+    <div class="map-empty" aria-label="Peta chapter">
+      <span class="count num">0</span>
+      <div>
+        <span class="mono muted">Chapter terverifikasi</span>
+        <p style="margin-top:6px">Peta chapter muncul di sini begitu chapter pertama lolos verifikasi. Kami tidak menampilkan kota yang belum benar-benar terbentuk.</p>
+      </div>
+      <div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+
+    <div class="form-card" id="gabung">
+      <div class="f-head"><h3 style="font-size:clamp(28px,3.4vw,40px)">Gabung <em>Gapless Indonesia</em></h3><span class="draft">Langsung ke tim Gapless</span></div>
+      <form data-form="gabung" action="https://formsubmit.co/gapless.indonesia@gmail.com" method="POST" novalidate><input type="hidden" name="_subject" value="[Website] Pendaftaran baru Gapless"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <fieldset class="field">
+          <legend>Mau gabung sebagai</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="peran" value="kawan" id="peran-kawan" checked><span>Kawan Setara</span></label>
+            <label class="choice"><input type="radio" name="peran" value="volunteer" id="peran-volunteer"><span>Volunteer Setara</span></label>
+            <label class="choice"><input type="radio" name="peran" value="mentor" id="peran-mentor"><span>Mentor Kakak Kampus</span></label>
+            <label class="choice"><input type="radio" name="peran" value="chapter" id="peran-chapter"><span>Bangun Chapter</span></label>
+            <label class="choice"><input type="radio" name="peran" value="navkar" id="peran-navkar"><span>Minat Navkar (siswa)</span></label>
+          </div>
+        </fieldset>
+        <div class="grid2">
+          <div class="field"><label for="g-nama">Nama</label><input type="text" id="g-nama" name="nama" autocomplete="name" required></div>
+          <div class="field"><label for="g-kota">Kota / kabupaten</label><input type="text" id="g-kota" name="kota" autocomplete="address-level2" required></div>
+          <div class="field"><label for="g-wa">WhatsApp</label><input type="tel" id="g-wa" name="wa" autocomplete="tel" inputmode="tel" required></div>
+          <div class="field"><label for="g-email">Email <span class="hint">(opsional)</span></label><input type="email" id="g-email" name="email" autocomplete="email"></div>
+        </div>
+        <label class="check"><input type="checkbox" id="g-umur" name="umur"><span>Saya berusia di bawah 18 tahun dan sudah mendapat izin orang tua atau wali.</span></label>
+        <label class="check"><input type="checkbox" id="g-setuju" name="setuju" required><span>Saya setuju data ini dipakai Gapless untuk menghubungi saya soal kegiatan gerakan, sesuai <a href="#privasi">kebijakan privasi</a>.</span></label>
+        <div class="form-foot"><button class="btn btn-primary" type="submit">Gabung Gapless Indonesia</button></div>
+        <p class="form-msg" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 STORIES ============ -->
+<section class="sec warm" id="cerita" aria-labelledby="h-cerita">
+  <div class="wrap">
+    <div class="sec-head"><span class="mono">Dari cerita ke bukti</span><span class="mono num">08 / 10</span></div>
+    <div class="story-grid">
+      <div>
+        <h2 id="h-cerita">Punya cerita? Bantu kami menemukan <em>buktinya.</em></h2>
+        <ul class="qs">
+          <li><span class="plus" aria-hidden="true">+</span>Ada masalah pendidikan di kotamu?</li>
+          <li><span class="plus" aria-hidden="true">+</span>Program pemerintah yang belum tepat sasaran?</li>
+          <li><span class="plus" aria-hidden="true">+</span>Kesulitan mengakses pekerjaan, layanan kesehatan, atau fasilitas dasar?</li>
+        </ul>
+        <p style="margin-top:22px;font-size:20px;font-weight:500">Ceritakan apa yang kamu temukan.</p>
+        <p class="muted" style="margin-top:10px">Gapless akan menelaah informasi yang masuk, memeriksa bukti, dan menentukan kemungkinan tindak lanjut sesuai kapasitas serta prioritas gerakan.</p>
+        <div class="promise">
+          <span class="mono" style="color:var(--ink-soft)">Janji kami</span>
+          <p>Publikasi hanya dilakukan setelah verifikasi dan penilaian risiko. Identitasmu tidak dipublikasikan tanpa izinmu.</p>
+        </div>
+      </div>
+      <div class="form-card light-card" style="margin-top:0">
+        <div class="f-head"><h3>Kirim cerita &amp; temuan</h3><span class="draft">Langsung ke tim Gapless</span></div>
+        <form data-form="cerita" action="https://formsubmit.co/gapless.indonesia@gmail.com" method="POST" novalidate><input type="hidden" name="_subject" value="[Website] Cerita & temuan baru"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="grid2">
+            <div class="field"><label for="c-wilayah">Wilayah</label><input type="text" id="c-wilayah" name="wilayah" placeholder="Kota/kabupaten, provinsi" required></div>
+            <div class="field"><label for="c-isu">Kategori isu</label>
+              <select id="c-isu" name="isu" required>
+                <option value="">Pilih isu</option>
+                <option>Ekonomi dan aset</option><option>Pekerjaan</option><option>Pendidikan</option><option>Kesehatan dan perlindungan sosial</option><option>Hunian dan layanan dasar</option><option>Mobilitas dan akses digital</option><option>Lingkungan dan iklim</option><option>Tata kelola dan akses kebijakan</option>
+              </select></div>
+          </div>
+          <div class="field"><label for="c-ringkas">Ringkasan masalah</label><textarea id="c-ringkas" name="ringkasan" placeholder="Apa yang terjadi, siapa yang terdampak, dan sejak kapan." required></textarea></div>
+          <div class="grid2">
+            <div class="field"><label for="c-waktu">Waktu kejadian</label><input type="date" id="c-waktu" name="waktu"></div>
+            <div class="field"><label for="c-bukti">Bukti pendukung <span class="hint">(opsional: foto, dokumen, tautan)</span></label><input type="url" id="c-bukti" name="bukti" placeholder="Tautan Google Drive, berita, atau unggahan"></div>
+          </div>
+          <div class="field"><label for="c-kontak">Kontak (WhatsApp atau email)</label><input type="text" id="c-kontak" name="kontak" required><span class="hint">Hanya untuk verifikasi. Tidak dipublikasikan.</span></div>
+          <label class="check"><input type="checkbox" id="c-setuju" name="setuju" required><span>Saya setuju informasi ini ditelaah Gapless sesuai <a href="#privasi">kebijakan privasi</a>. Identitas saya tidak dipublikasikan tanpa izin saya.</span></label>
+          <div class="form-foot"><button class="btn btn-primary" type="submit">Kirim cerita &amp; temuan</button></div>
+          <p class="form-msg" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 PARTNERSHIP ============ -->
+<section class="sec light" id="kolaborasi" aria-labelledby="h-kolab">
+  <div class="wrap">
+    <div class="sec-head"><span class="mono">Kolaborasi</span><span class="mono num">09 / 10</span></div>
+    <div class="part-grid">
+      <div>
+        <h2 id="h-kolab">Perubahan tidak bisa dikerjakan <em>sendirian.</em></h2>
+        <p style="margin-top:22px">Gapless membuka kolaborasi dengan sekolah, kampus, komunitas, pemerintah, dunia usaha, dan lembaga filantropi.</p>
+        <div class="who"><span class="pill">Riset bersama</span><span class="pill">Pendampingan pendidikan</span><span class="pill">Aktivasi komunitas</span><span class="pill">Pengembangan produk</span><span class="pill">Perbaikan program publik</span></div>
+        <div class="indep">
+          <span class="mono">Prinsip independensi</span>
+          <p>Gapless adalah mitra strategis sekaligus kritis. Kerja sama tidak menghilangkan independensi riset dan evaluasi kami.</p>
+        </div>
+      </div>
+      <div class="form-card light-card" style="margin-top:0">
+        <div class="f-head"><h3>Ajukan kolaborasi</h3><span class="draft">Langsung ke tim Gapless</span></div>
+        <form data-form="kolaborasi" action="https://formsubmit.co/gapless.indonesia@gmail.com" method="POST" novalidate><input type="hidden" name="_subject" value="[Website] Pengajuan kolaborasi"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="grid2">
+            <div class="field"><label for="k-lembaga">Nama lembaga</label><input type="text" id="k-lembaga" name="lembaga" autocomplete="organization" required></div>
+            <div class="field"><label for="k-jenis">Jenis lembaga</label>
+              <select id="k-jenis" name="jenis" required><option value="">Pilih jenis</option><option>Sekolah</option><option>Kampus</option><option>Komunitas</option><option>Pemerintah</option><option>Dunia usaha</option><option>Lembaga filantropi</option></select></div>
+            <div class="field"><label for="k-nama">Nama kontak</label><input type="text" id="k-nama" name="nama" autocomplete="name" required></div>
+            <div class="field"><label for="k-kontak">Email atau WhatsApp</label><input type="text" id="k-kontak" name="kontak" required></div>
+          </div>
+          <div class="field"><label for="k-ide">Ide kolaborasi</label><textarea id="k-ide" name="ide" placeholder="Bentuk kolaborasi, wilayah, dan waktu yang dibayangkan." required></textarea></div>
+          <label class="check"><input type="checkbox" id="k-setuju" name="setuju" required><span>Saya setuju data ini dipakai untuk menindaklanjuti pengajuan, sesuai <a href="#privasi">kebijakan privasi</a>.</span></label>
+          <div class="form-foot"><button class="btn btn-dark" type="submit">Ajukan kolaborasi</button></div>
+          <p class="form-msg" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 FINAL CTA ============ -->
+<section class="final" aria-labelledby="h-final">
+  <div class="ball" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="mono" style="color:var(--ink-soft)">10 / 10</span>
+    <h2 id="h-final">Jangan cuma lihat ketimpangan. Ikut ubah <em>keadaannya.</em></h2>
+    <p>Tidak harus menjadi pejabat, ahli, atau aktivis untuk memulai. Kadang perubahan berawal dari satu cerita, satu temuan, atau sekelompok orang yang mau bergerak.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#gabung">Gabung Gapless Indonesia
+        <svg class="arrow" viewBox="0 0 30 12" aria-hidden="true"><path d="M0 6h27M22 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+      <a class="btn btn-ghost" href="#cerita">Punya masalah? Ceritakan.</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec light" id="privasi" aria-labelledby="h-privasi">
+  <div class="wrap">
+    <div class="sec-head"><span class="mono">Kebijakan privasi &amp; prinsip independensi</span><span class="mono">Versi 1 · 19 November 2026</span></div>
+    <div class="policy">
+      <article>
+        <h3 id="h-privasi">Kebijakan privasi</h3>
+        <ul class="plist">
+          <li><b>Data yang kami minta.</b> Nama, kota, kontak (WhatsApp atau email), isi cerita atau pengajuan, dan tautan bukti yang kamu kirim lewat formulir.</li>
+          <li><b>Untuk apa.</b> Menghubungimu soal kegiatan yang kamu pilih, menelaah dan memverifikasi cerita, serta menindaklanjuti kerja sama. Tidak dijual dan tidak dipakai untuk iklan.</li>
+          <li><b>Cerita dan temuan.</b> Hanya dipublikasikan setelah verifikasi dan penilaian risiko. Identitas pelapor tidak dipublikasikan tanpa izin.</li>
+          <li><b>Di bawah 18 tahun.</b> Daftar hanya dengan izin orang tua atau wali.</li>
+          <li><b>Cara data dikirim.</b> Formulir diteruskan lewat layanan FormSubmit ke email tim Gapless dan disimpan selama masih dibutuhkan untuk tujuan di atas.</li>
+          <li><b>Hakmu.</b> Kamu bisa minta data dilihat, diperbaiki, atau dihapus kapan saja lewat <a href="mailto:gapless.indonesia@gmail.com">gapless.indonesia@gmail.com</a>.</li>
+        </ul>
+      </article>
+      <article id="independensi">
+        <h3>Prinsip independensi</h3>
+        <ul class="plist">
+          <li><b>Mitra strategis sekaligus kritis.</b> Kolaborasi dulu, tekan kalau buntu, selalu bawa bukti.</li>
+          <li><b>Bukti sebelum publikasi.</b> Setiap temuan lewat Kartu Bukti: tiga bukti, dua jenis sumber, dominan data terbuka.</li>
+          <li><b>Kerja sama tertulis.</b> Setiap pendanaan dan kerja sama dicatat tertulis, per kasus.</li>
+          <li><b>Tanpa konflik kepentingan.</b> Kami tidak menerima dana dari vendor atau pemasok program yang sedang kami kawal.</li>
+          <li><b>Evaluasi tidak bisa dibeli.</b> Kerja sama tidak mengubah isi riset, Rapor, atau evaluasi kami.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="f-in">
+    <div>
+      <img src="data:image/webp;base64,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" width="400" height="170" alt="Gapless Indonesia">
+      <p class="tl">Jarak ini buatan. Bisa dirapatkan.</p>
+    </div>
+    <div>
+      <p class="mono">Gapless</p>
+      <ul>
+        <li><a href="#tentang">Tentang Gapless</a></li>
+        <li><a href="#program">Program</a></li>
+        <li><a href="#rapor">Rapor</a></li>
+        <li><a href="#chapter">Chapter</a></li>
+        <li><a href="#kolaborasi">Kolaborasi</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="mono">Kontak</p>
+      <ul>
+        <li>Instagram: <a href="https://www.instagram.com/gapless.indonesia/" target="_blank" rel="noopener">@gapless.indonesia</a></li>
+        <li>Email: <a href="mailto:gapless.indonesia@gmail.com">gapless.indonesia@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="mono">Prinsip</p>
+      <ul>
+        <li><a href="#privasi">Kebijakan privasi</a></li>
+        <li><a href="#independensi">Prinsip independensi</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom"><span>© 2026 Gapless Indonesia</span><span class="mono" style="margin:0">#RapatkanJarak</span></div>
+</footer>
+
+<script>
+(function(){
+  function setRole(r){var el=document.getElementById('peran-'+r);if(el)el.checked=true;}
+  function setIsu(v){var s=document.getElementById('c-isu');if(s){for(var i=0;i<s.options.length;i++){if(s.options[i].text===v){s.selectedIndex=i;}}}}
+  document.addEventListener('click',function(e){
+    var r=e.target.closest('[data-role]');if(r)setRole(r.getAttribute('data-role'));
+    var s=e.target.closest('[data-isu]');if(s)setIsu(s.getAttribute('data-isu'));
+  });
+  var burger=document.getElementById('burger'),drawer=document.getElementById('drawer');
+  burger.addEventListener('click',function(){var o=drawer.classList.toggle('open');burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Tutup menu':'Buka menu');});
+  drawer.addEventListener('click',function(e){if(e.target.closest('a')){drawer.classList.remove('open');burger.setAttribute('aria-expanded','false');}});
+  document.querySelectorAll('form[data-form]').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var msg=f.querySelector('.form-msg'),btn=f.querySelector('button[type=submit]'),bad=null;
+      msg.classList.remove('ok');
+      f.querySelectorAll('[required]').forEach(function(i){
+        var ok=i.type==='checkbox'?i.checked:i.value.trim()!=='';
+        i.setAttribute('aria-invalid',ok?'false':'true');
+        if(!ok&&!bad)bad=i;
+      });
+      if(bad){msg.textContent='Masih ada yang belum diisi. Lengkapi kolom yang ditandai, lalu kirim lagi.';msg.classList.add('on');bad.focus();return;}
+      var data={};new FormData(f).forEach(function(v,k){data[k]=v;});
+      var label=btn.textContent;btn.disabled=true;btn.textContent='Mengirim…';
+      fetch(f.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+        .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
+        .then(function(res){
+          if(res.ok&&String(res.j.success)!=='false'){msg.textContent='Terkirim. Terima kasih! Tim Gapless akan menghubungimu lewat kontak yang kamu isi.';msg.classList.add('on','ok');f.reset();}
+          else{throw new Error('gagal');}
+        })
+        .catch(function(){msg.innerHTML='Formulir gagal terkirim. Coba lagi sebentar lagi, atau kirim langsung ke <a href="mailto:'+'gapless.indonesia@gmail.com">gapless.indonesia@gmail.com</a>.';msg.classList.add('on');})
+        .finally(function(){btn.disabled=false;btn.textContent=label;});
+    });
+  });
+})();
+</script>
+</body>
+</html>
